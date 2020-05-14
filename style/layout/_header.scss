@@ -1,3 +1,121 @@
+.container {
+  background-color: pink;
+}
 #header {
+  .top-header {
+    background-color: #343434;
+    height: 41px;
+    overflow: hidden;
+    @include screen-sm {
+      display: none;
+    }
 
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sns-links {
+      display: flex;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 41px;
+        width: 42px;
+        color: #dedede;
+        font-size: 17px;
+        border-right: 1px solid rgba(182, 180, 180, 0.33);
+
+        &.twitter {
+          &:hover {
+            background-color: #08c;
+          }
+        }
+        &.pinterest {
+          &:hover {
+            background-color: #cc0041;
+          }
+        }
+        &.facebook {
+          &:hover {
+            background-color: #000acc;
+          }
+        }
+        &.instagram {
+          &:hover {
+            background-color: #be00cc;
+          }
+        }
+        &.skype {
+          &:hover {
+            background-color: #08c;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    >div {
+      margin-left: 30px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .main-header {
+    height: 85px;
+    overflow: hidden;
+    @include screen-sm {
+      height: 76px;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+    }
+    .logo {
+      width: 172px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      @include screen-sm {
+        display: none;
+      }
+      ul {
+        display: flex;
+        .nav-item {
+          .nav-link {
+            display: flex;
+            align-items: center;
+            height: 85px;
+            color: #333;
+            padding: 0 15px;
+            &:hover {
+              color: #08c;
+            }
+          }
+        }
+      }
+    }
+    .btn-menu {
+      padding: 10px 15px;
+      font-size: 22px;
+      display: none;
+      @include screen-sm {
+        display: block;
+      }
+    }
+  }
 }
