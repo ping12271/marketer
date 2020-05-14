@@ -607,5 +607,18 @@ p.normal {
       border-radius: 70%; }
     #section .main-services .container .services-item h2 {
       margin: 25px 0; }
+#section .main-video {
+  background-color: #f6f7f8;
+  padding: 100px 0; }
+  #section .main-video .container {
+    display: flex;
+    justify-content: space-between; }
+    #section .main-video .container .panel .panel-item i {
+      color: #656565;
+      font-size: 25px; }
+    #section .main-video .container .panel .panel-item a {
+      font-weight: 500;
+      color: #656565;
+      padding: 14px 20px; }
 
 /*# sourceMappingURL=style.css.map */

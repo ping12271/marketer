@@ -91,4 +91,30 @@ p.normal {
       }
     }
   }
+  .main-video {
+    background-color: #f6f7f8;
+    padding: 100px 0;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      iframe {
+      }
+      .panel {
+        .panel-item {
+          i {
+            color: #656565;
+            font-size: 25px;
+          }
+          a {
+            font-weight: 500;
+            color: #656565;
+            padding: 14px 20px;
+          }
+          p {
+
+          }
+        }
+      }
+    }
+  }
 }
