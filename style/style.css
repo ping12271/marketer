@@ -527,6 +527,8 @@ body {
       padding: 0 15px; }
       #header .main-header nav ul .nav-item .nav-link:hover {
         color: #08c; }
+    #header .main-header nav ul .nav-item .is_active {
+      color: #08c; }
   #header .main-header .btn-menu {
     padding: 10px 15px;
     font-size: 22px;
@@ -695,13 +697,17 @@ p.normal {
       #section .main-intro .container .intro-title p.normal {
         margin: 40px 0;
         color: #fff; }
-      #section .main-intro .container .intro-title .more-btn {
+      #section .main-intro .container .intro-title .intro-btn {
         width: 161px;
         text-align: center;
-        border: 1px solid #fff;
+        background-color: #3498db;
+        border: 2px solid #fff;
         border-radius: 5px;
-        padding: 10px 30px;
+        padding: 15px 30px;
         color: #fff; }
+        #section .main-intro .container .intro-title .intro-btn:hover {
+          background-color: #999;
+          border: 2px solid #999; }
     #section .main-intro .container .intro-cover {
       width: 100%; }
       @media only screen and (max-width: 768px) {
@@ -1144,13 +1150,14 @@ p.normal {
       #section .main-mail .container .mail-contents .mail-desc h1 {
         line-height: 1.5;
         margin-bottom: 40px; }
-      #section .main-mail .container .mail-contents .mail-desc .email {
+      #section .main-mail .container .mail-contents .mail-desc .mail {
         width: 400px;
         padding: 20px;
         background-color: #3498db;
         border-radius: 7px;
         border: 1px solid #fff;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        color: #fff; }
       #section .main-mail .container .mail-contents .mail-desc .check {
         display: flex; }
         @media only screen and (max-width: 768px) {
@@ -1161,14 +1168,15 @@ p.normal {
           justify-content: center; }
         #section .main-mail .container .mail-contents .mail-desc .check .checkbox {
           margin: 0 5px; }
-      #section .main-mail .container .mail-contents .mail-desc .email-submit {
+      #section .main-mail .container .mail-contents .mail-desc .mail-submit {
         margin-top: 30px;
         border-radius: 7px;
         padding: 20px;
         background-color: #fff;
         color: #3498db; }
-        #section .main-mail .container .mail-contents .mail-desc .email-submit:hover {
+        #section .main-mail .container .mail-contents .mail-desc .mail-submit:hover {
           background-color: #2980b9;
+          border: 1px solid #2980b9;
           color: #fff; }
       #section .main-mail .container .mail-contents .mail-desc .btn-text {
         display: block;
