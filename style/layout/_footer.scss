@@ -1,3 +1,190 @@
 #footer {
-
+  .main-footer {
+    padding: 100px 0;
+    background-color: #353535;
+    .container {
+      display: flex;
+      @include screen-sm {
+          flex-direction: column;
+      }
+      .footer-item {
+        flex: 1 1 25%;
+        margin-left: 20px;
+        @include screen-sm {
+          padding-bottom: 100px;
+        }
+        p {
+          color: #ddd;
+          line-height: 1.5;
+        }
+        h3 {
+          color: #ddd;
+          font-weight: 600;
+          position: relative;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            display: inline-block;
+          }
+        }
+      }
+      .score {
+        @include screen-sm {
+          padding-bottom: 100px;
+        }
+        .score-btn {
+          padding: 15px;
+          background-color: #3498db;
+          border-radius: 5px;
+          color: #ddd;
+          margin-top: 20px;
+          &:hover {
+            background-color: rgba(255,255,255,0.1);
+          }
+        }
+      }
+      .links {
+        ul {
+          margin-top: 12px;
+          li {
+            border-bottom: 1px solid #999;
+            a {
+              display: inline-block;
+              color: #fff;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+      .project {
+        @include screen-sm {
+          padding-bottom: 100px;
+        }
+        .pop-up {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          @include screen-sm {
+              flex-wrap: nowrap;
+          }
+          li {
+            flex: 1 1 30%;
+            border: 3px solid #555;
+            margin-left: 8px;
+            margin-top: 8px;
+            img {
+              width: 100px;
+            }
+          }
+        }
+      }
+      .contact {
+        @include screen-sm {
+          padding-bottom: 50px;
+        }
+        .info {
+          color: #ddd;
+          margin-top: 15px;
+          font-size: 14px;
+          >div {
+            margin-top: 10px;
+            i {
+              margin-right: 10px;
+              font-size: 20px;
+              color: #ddd;
+            }
+            a {
+              color: #ddd;
+              &:hover {
+                color: #0088cc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sns-footer {
+    @include screen-sm {
+      padding-bottom: 100px;
+    }
+    padding: 20px 0;
+    background-color: #353535;
+    color: #999;
+    .container {
+      border-top: 1px dotted #999;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      @include screen-sm {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .top-btn {
+        padding: 15px;
+        background-color: #353535;
+        border-radius: 5px;
+        border: 1px solid #999;
+        @include screen-sm {
+          margin: 20px 0;
+        }
+        i {
+          color: #999;
+          font-size: 20px;
+        }
+        &:hover {
+          background-color: #3498db;
+          color: #fff;
+        }
+      }
+      .sns-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 5px;
+          margin-right: 3px;
+        }
+        a {
+          padding: 5px;
+          font-size: 25px;
+          color: #ddd;
+          .fa-twitter {
+            &:hover {
+              color: #08c;
+            }
+          }
+          .fa-pinterest {
+            &:hover {
+              color: #cc0041;
+            }
+          }
+          .fa-facebook {
+            &:hover {
+              color: #000acc;
+            }
+          }
+          .fa-instagram {
+            &:hover {
+              color: #be00cc;
+            }
+          }
+          .fa-skype {
+            &:hover {
+              color: #08c;
+            }
+          }
+        }
+      }
+    }
+  }
 }
