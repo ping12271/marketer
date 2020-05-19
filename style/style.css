@@ -575,6 +575,7 @@ body {
     #footer .main-footer .container .score .score-btn {
       padding: 15px;
       background-color: #3498db;
+      border: 1px solid #3498db;
       border-radius: 5px;
       color: #ddd;
       margin-top: 20px; }
@@ -1168,13 +1169,13 @@ p.normal {
           justify-content: center; }
         #section .main-mail .container .mail-contents .mail-desc .check .checkbox {
           margin: 0 5px; }
-      #section .main-mail .container .mail-contents .mail-desc .mail-submit {
+      #section .main-mail .container .mail-contents .mail-desc .mail-button {
         margin-top: 30px;
         border-radius: 7px;
         padding: 20px;
         background-color: #fff;
         color: #3498db; }
-        #section .main-mail .container .mail-contents .mail-desc .mail-submit:hover {
+        #section .main-mail .container .mail-contents .mail-desc .mail-button:hover {
           background-color: #2980b9;
           border: 1px solid #2980b9;
           color: #fff; }
