@@ -107,18 +107,25 @@ p.normal {
     padding: 100px 0;
     .container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       @include screen-sm {
         flex-direction: column;
       }
+      video {
+        flex: 1;
+      }
       .panel {
+        flex: 1;
+        padding: 20px;
         .panel-item {
           border-bottom: 1px solid #FFE8E9EA;
-          display: flex;
-          align-items: center;
-          &.is_active {
-            border-bottom: 3px solid #3498db;
+          padding: 10px;
+          .answer {
+            display: none;
+            margin-top: 10px;
+            color: #7c8595;
+            line-height: 1.5;
+            border-top: 3px solid #0088cc;
           }
           &:hover {
             background-color: rgba(0, 0, 0, 0.1);
@@ -130,7 +137,7 @@ p.normal {
           a {
             font-weight: 500;
             color: #656565;
-            padding: 20px 20px;
+            padding: 20px 10px;
           }
         }
       }
@@ -177,7 +184,7 @@ p.normal {
             }
             &:hover {
               .screen {
-                display: flex;
+                opacity: 1;
               }
             }
           }
@@ -187,13 +194,15 @@ p.normal {
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, .6);
-            align-items: center;
+            background: rgba(0, 0, 0, .8);
+            display: flex;
             justify-content: center;
+            align-items: center;
             color: #fff;
             font-size: 40px;
             border-radius: 5px 5px 0 0;
-            display: none;
+            opacity: 0;
+            transition: .6s;
           }
           .project-text {
             padding: 10px;
@@ -389,7 +398,7 @@ p.normal {
             position: relative;
             &:hover {
               .screen {
-                display: flex;
+                opacity: 1;
               }
             }
           }
@@ -400,11 +409,13 @@ p.normal {
             left: 0;
             right: 0;
             background: rgba(0, 0, 0, .6);
+            display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
             font-size: 40px;
-            display: none;
+            transition: .6s;
+            opacity: 0;
           }
           .news-desc {
             padding: 20px;
