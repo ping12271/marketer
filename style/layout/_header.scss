@@ -101,9 +101,13 @@
             align-items: center;
             height: 85px;
             color: #333;
+            font-weight: 500;
             padding: 0 15px;
             &:hover {
               color: #08c;
+            }
+            i {
+              margin-left: 5px;
             }
           }
           .is_active {
@@ -122,3 +126,4 @@
     }
   }
 }
+

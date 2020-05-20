@@ -68,33 +68,32 @@
                 <nav>
                     <ul>
                         <li class="nav-item">
-                            <a href="" class="nav-link is_active">
+                            <a href="#!" class="nav-link is_active">
                                 Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="#!" class="nav-link">
                                 Page
+                                <i class="fa fa-caret-down"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
-                                Case
+                            <a href="#!" class="nav-link">
+                                Case Studies
+                                <i class="fa fa-caret-down"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
-                                Studies
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="#!" class="nav-link">
                                 Blog
+                                <i class="fa fa-caret-down"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="#!" class="nav-link">
                                 Contact Us
+                                <i class="fa fa-caret-down"></i>
                             </a>
                         </li>
                     </ul>
@@ -106,7 +105,7 @@
         </div>
     </header>
 
-    <main id="section">
+    <section id="section-main">
         <div class="main-intro">
             <div class="container">
                 <div class="intro-title">
@@ -114,7 +113,9 @@
                     <p class="normal">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque beatae error esse ex fugiat libero quisquam tempora. At eos facere harum, impedit in iure praesentium sit veniam voluptas!
                     </p>
-                    <input class="intro-btn" type="button" value="READ MORE">
+                    <div class="intro-btn">
+                        READ MORE
+                    </div>
                 </div>
                 <div class="intro-cover">
                     <img src="../images/rs1.png" alt="">
@@ -639,7 +640,6 @@
                         </div>
                         <span>Research</span>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -660,13 +660,15 @@
                             <input class="checkbox" type="checkbox">
                             <span>Marketer</span>
                         </div>
-                        <input class="mail-button" type="button" value="GET STARTED!">
+                        <div class="mail-button">
+                            GET STARTED!
+                        </div>
                         <span class="btn-text">Please select at least one list.</span>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer id="footer">
         <div class="main-footer">
@@ -676,7 +678,9 @@
                     <p>
                         Test your site now and get the reliable and accurate information you for your online presence.
                     </p>
-                    <input class="score-btn" type="button" value="Check Your Score">
+                    <div class="score-btn">
+                        Check Your Score
+                    </div>
                 </div>
                 <div class="footer-item links">
                     <h3>USEFUL LINKS</h3>
@@ -689,25 +693,44 @@
                 </div>
                 <div class="footer-item project">
                     <h3>LATEST PROJECTS</h3>
-                    <ul class="pop-up">
+                    <ul class="gallery">
                         <li>
-                            <img src="../images/footer1.jpg" alt="">
+                            <a href="#!">
+                                <img src="../images/footer1.jpg" alt="">
+                                <div class="screen"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="../images/footer2.jpg" alt="">
+                            <a href="#!">
+                                <img src="../images/footer2.jpg" alt="">
+                                <div class="screen"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="../images/footer3.jpg" alt="">
+                            <a href="#!">
+                                <img src="../images/footer3.jpg" alt="">
+                                <div class="screen"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="../images/footer4.jpg" alt="">
+                            <a href="#!">
+                                <img src="../images/footer4.jpg" alt="">
+                                <div class="screen"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="../images/footer5.jpg" alt="">
+                            <a href="#!">
+                                <img src="../images/footer5.jpg" alt="">
+                                <div class="screen"></div>
+                            </a>
                         </li>
                         <li>
-                            <img src="../images/footer6.jpg" alt="">
+                            <a href="#!">
+                                <img src="../images/footer6.jpg" alt="">
+                                <div class="screen"></div>
+                            </a>
                         </li>
+
                     </ul>
                 </div>
                 <div class="footer-item contact">
@@ -731,12 +754,12 @@
                 </div>
             </div>
         </div>
-        <div class="sns-footer">
+        <div class="bottom-footer">
             <div class="container">
-                <span>© 2016 Marketer. Designed by Bogdan Preda</span>
-                <a href="#!" class="top-btn">
-                    <i class="fa fa-angle-up"></i>
-                </a>
+                <span class="by">© 2016 Marketer. Designed by Bogdan Preda</span>
+                <div class="top-btn">
+                    <a href="#!"><i class="fa fa-angle-up"></i></a>
+                </div>
                 <div class="sns-icon">
                     <span>Follow Us:</span>
                     <a href="#!"><i class="fa fa-twitter"></i></a>
@@ -748,6 +771,9 @@
             </div>
         </div>
     </footer>
+</div>
+<div class="popup">
+    <img src="../images/portfolio1.jpg" alt="">
 </div>
 <script src="../js/script.js"></script>
 </body>
