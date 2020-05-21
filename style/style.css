@@ -500,8 +500,7 @@ body {
       font-size: 20px;
       margin-right: 5px; }
 #header .main-header {
-  height: 85px;
-  overflow: hidden; }
+  height: 85px; }
   @media only screen and (max-width: 768px) {
     #header .main-header {
       height: 76px; } }
@@ -519,26 +518,41 @@ body {
       display: none; } }
   #header .main-header nav ul {
     display: flex; }
-    #header .main-header nav ul .nav-item .nav-link {
-      display: flex;
-      align-items: center;
-      height: 85px;
-      color: #333;
-      font-weight: 500;
-      padding: 0 15px; }
-      #header .main-header nav ul .nav-item .nav-link:hover {
-        color: #08c; }
-      #header .main-header nav ul .nav-item .nav-link i {
-        margin-left: 5px; }
-    #header .main-header nav ul .nav-item .is_active {
-      color: #08c; }
-    #header .main-header nav ul .nav-item .links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      border: 1px solid #000;
-      border-top: 0; }
+    #header .main-header nav ul .nav-item {
+      position: relative; }
+      #header .main-header nav ul .nav-item .nav-link {
+        display: flex;
+        align-items: center;
+        height: 85px;
+        color: #333;
+        font-weight: 500;
+        padding: 0 15px; }
+        #header .main-header nav ul .nav-item .nav-link:hover {
+          color: #08c; }
+        #header .main-header nav ul .nav-item .nav-link .icon {
+          margin-left: 5px; }
+          #header .main-header nav ul .nav-item .nav-link .icon.show .fa-caret-up {
+            display: block; }
+          #header .main-header nav ul .nav-item .nav-link .icon.show .fa-caret-down {
+            display: none; }
+          #header .main-header nav ul .nav-item .nav-link .icon .fa-caret-up {
+            display: none; }
+      #header .main-header nav ul .nav-item .links {
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none; }
+        #header .main-header nav ul .nav-item .links a {
+          width: 123px;
+          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid #ddd;
+          color: #333; }
+          #header .main-header nav ul .nav-item .links a:hover {
+            color: #08c; }
   #header .main-header .btn-menu {
     padding: 10px 15px;
     font-size: 22px;

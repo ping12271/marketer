@@ -73,7 +73,6 @@
 
   .main-header {
     height: 85px;
-    overflow: hidden;
     @include screen-sm {
       height: 76px;
     }
@@ -96,6 +95,7 @@
       ul {
         display: flex;
         .nav-item {
+          position: relative;
           .nav-link {
             display: flex;
             align-items: center;
@@ -106,20 +106,39 @@
             &:hover {
               color: #08c;
             }
-            i {
+            .icon {
               margin-left: 5px;
+              &.show {
+                .fa-caret-up {
+                  display: block;
+                }
+                .fa-caret-down {
+                  display: none;
+                }
+              }
+              .fa-caret-up {
+                display: none;
+              }
             }
           }
-          .is_active {
-            color: #08c;
-          }
           .links {
+            background-color: #fff;
             position: absolute;
             top: 100%;
             left: 0;
-            width: 100%;
-            border: 1px solid #000;
-            border-top: 0;
+            display: none;
+            a {
+              width: 123px;
+              height: 36px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-bottom: 1px solid #ddd;
+              color: #333;
+              &:hover {
+                color: #08c;
+              }
+            }
           }
         }
       }

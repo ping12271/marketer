@@ -14,4 +14,10 @@ $('.que').on('click', function(){
 })
 
 //header//
+$(function () {
+    $('.nav-item .nav-link').on('click', function () {
+        $('.nav-item .links').slideToggle(200);
+        $('.nav-item .nav-link .icon').toggleClass('show');
+    })
+})
 
