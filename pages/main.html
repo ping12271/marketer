@@ -16,9 +16,11 @@
     <!--  google material icons  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <link rel="stylesheet" href="../style/style.css">
     <script src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -118,21 +120,44 @@
             </div>
         </div>
     </header>
-
     <section id="section-main">
         <div class="main-intro">
             <div class="container">
-                <div class="intro-title">
-                    <h1>Social Media Promotion</h1>
-                    <p class="normal">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque beatae error esse ex fugiat libero quisquam tempora. At eos facere harum, impedit in iure praesentium sit veniam voluptas!
-                    </p>
-                    <div class="intro-btn">
-                        READ MORE
+                <div class="main-intro-slide">
+                    <div class="main-intro-item img1">
+                        <div class="intro-desc">
+                            <h1>Social Media Promotion</h1>
+                            <p class="normal">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque beatae error esse ex fugiat libero quisquam tempora. At eos facere harum, impedit in iure praesentium sit veniam voluptas!
+                            </p>
+                            <div class="intro-btn">READ MORE</div>
+                        </div>
+                        <img src="../images/rs1.png" alt="">
                     </div>
-                </div>
-                <div class="intro-cover">
-                    <img src="../images/rs1.png" alt="">
+                    <div class="main-intro-item img1">
+                        <div class="intro-desc">
+                            <h1>Social Media Promotion</h1>
+                            <p class="normal">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque beatae error esse ex fugiat libero quisquam tempora. At eos facere harum, impedit in iure praesentium sit veniam voluptas!
+                            </p>
+                            <div class="intro-btn">
+                                READ MORE
+                            </div>
+                        </div>
+                        <img src="../images/rs2.png" alt="">
+                    </div>
+                    <div class="main-intro-item img1">
+                        <div class="intro-desc">
+                            <h1>Social Media Promotion</h1>
+                            <p class="normal">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur atque beatae error esse ex fugiat libero quisquam tempora. At eos facere harum, impedit in iure praesentium sit veniam voluptas!
+                            </p>
+                            <div class="intro-btn">
+                                READ MORE
+                            </div>
+                        </div>
+                        <img src="../images/rs5.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,7 +229,16 @@
                     <li class="panel-item">
                         <div class="que">
                             <i class="fa fa-rocket"></i>
-                            <a href="#!">Should I optimize my domain name to include keywords?</a>
+                            <p>Should I optimize my domain name to include keywords?</p>
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum dolor sit amet, consectetursit amet, consectetursit amet, consectetursit amet, consectetursit amet, consectetursit amet, consectetur adipisicing elit. Aut, cumque?</p>
+                        </div>
+                    </li>
+                    <li class="panel-item">
+                        <div class="que">
+                            <i class="fa fa-trophy"></i>
+                            <p>Should I optimize my domain name to include keywords?</p>
                         </div>
                         <div class="answer">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, cumque?</p>
@@ -212,17 +246,8 @@
                     </li>
                     <li class="panel-item">
                         <div class="que">
-                            <i class="fa fa-rocket"></i>
-                            <a href="#!">Should I optimize my domain name to include keywords?</a>
-                        </div>
-                        <div class="answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, cumque?</p>
-                        </div>
-                    </li>
-                    <li class="panel-item">
-                        <div class="que">
-                            <i class="fa fa-rocket"></i>
-                            <a href="#!">Should I optimize my domain name to include keywords?</a>
+                            <i class="fa fa-gift"></i>
+                            <p>Should I optimize my domain name to include keywords?</p>
                         </div>
                         <div class="answer">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, cumque?</p>
@@ -766,6 +791,14 @@
         </div>
     </footer>
 </div>
+<script>
+    $(".main-intro-slide").slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: true
+    });
+</script>
 <script src="../js/script.js"></script>
 </body>
 </html>
