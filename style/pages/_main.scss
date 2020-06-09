@@ -139,9 +139,6 @@ p.normal {
             display: flex;
             justify-content: center;
             align-items: center;
-            &.is_active {
-              border-bottom: 3px solid #3498db;
-            }
             p {
               display: flex;
               font-weight: 500;
@@ -152,6 +149,7 @@ p.normal {
           .answer {
             width: 530px;
             padding: 15px;
+            border-top: 3px solid #3498db;
             display: none;
             p {
               line-height: 1.5;
@@ -710,5 +708,23 @@ p.normal {
         }
       }
     }
+  }
+}
+.back-top {
+  position: fixed;
+  right: 50px;
+  bottom: -50px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0, .6);
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .show-header & {
+    transition-delay: 1s;
+    bottom: 50px;
   }
 }

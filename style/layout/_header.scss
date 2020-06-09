@@ -1,6 +1,3 @@
-//.container {
-//  background-color: rgba(0,0,0,0.3);
-//}
 #header {
   .top-header {
     background-color: #343434;
@@ -9,12 +6,10 @@
     @include screen-sm {
       display: none;
     }
-
     .container {
       display: flex;
       justify-content: space-between;
     }
-
     .sns-links {
       display: flex;
       a {
@@ -26,7 +21,6 @@
         color: #dedede;
         font-size: 17px;
         border-right: 1px solid rgba(182, 180, 180, 0.33);
-
         &.twitter {
           &:hover {
             background-color: #08c;
@@ -72,73 +66,103 @@
   }
 
   .main-header {
-    height: 85px;
-    @include screen-sm {
-      height: 76px;
-    }
+    position: relative;
     .container {
-      display: flex;
-      justify-content: space-between;
-      height: 100%;
-      align-items: center;
-    }
-    .logo {
-      width: 172px;
-      display: flex;
-      align-items: center;
-    }
-
-    nav {
       @include screen-sm {
-        display: none;
-      }
-      ul {
         display: flex;
-        .nav-item {
-          position: relative;
-          .nav-link {
-            display: flex;
-            align-items: center;
-            height: 85px;
-            color: #333;
-            font-weight: 500;
-            padding: 0 15px;
-            &:hover {
-              color: #08c;
-            }
-            .icon {
-              margin-left: 5px;
-              &.show {
-                .fa-caret-up {
-                  display: block;
-                }
-                .fa-caret-down {
-                  display: none;
-                }
-              }
-              .fa-caret-up {
-                display: none;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 85px;
+        @include screen-sm {
+            position: static;
+        }
+        ul {
+          display: flex;
+          @include screen-sm {
+            position: absolute;
+            top: 85px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #fff;
+            display: none;
+          }
+          .nav-item {
+            .nav-name {
+              display: flex;
+              align-items: center;
+              padding: 20px;
+              font-size: 1.2em;
+              font-weight: 500;
+              cursor: pointer;
+              .icon {
+                display: flex;
+                margin-left: 10px;
               }
             }
           }
-          .links {
-            background-color: #fff;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            display: none;
-            a {
-              width: 123px;
-              height: 36px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-bottom: 1px solid #ddd;
-              color: #333;
-              &:hover {
-                color: #08c;
-              }
-            }
+        }
+      }
+      .header-logo {
+        img {
+          height: 45px;
+        }
+      }
+    }
+    .nav-dropdown {
+      position: absolute;
+      top: 85px;
+      z-index: 1;
+      background-color: #fff;
+      box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.22);
+      opacity: 0;
+      &.active  {
+        opacity: 1;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          color: #333;
+          padding: 10px 0;
+          cursor: pointer;
+          i {
+            margin-right: 10px;
+          }
+          &:hover {
+            color: #0088cc;
+          }
+        }
+      }
+      &.v1 {
+        right: 120px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        .nav-dropdown-item1 {
+          margin-right: 30px;
+        }
+        ul {
+          padding-top: 20px;
+        }
+        p {
+          font-weight: 600;
+          line-height: 1.5;
+        }
+      }
+      &.v2 {
+        ul {
+          li {
+            border-bottom: 1px solid #333;
+            padding: 20px;
           }
         }
       }
