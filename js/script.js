@@ -8,9 +8,9 @@ $(function () {
 const marketer = {
         init: function () {
                 marketer.toggleSlideMenu()
-                marketer.toggleClass()
                 marketer.getScroll()
                 marketer.backTop();
+                marketer.slide();
         },
 
         toggleSlideMenu: function () {
@@ -22,16 +22,6 @@ const marketer = {
                 $('.btn-menu').on('click', function () {
                     $('.main-header nav ul').slideToggle();
                 });
-        },
-
-
-        toggleClass: function () {
-            $('.nav-item').on('mouseover', function () {
-                    $(this).find('.nav-dropdown').addClass('active');
-            });
-            $('.nav-item').on('mouseout', function () {
-                $(this).find('.nav-dropdown').removeClass('active');
-            });
         },
 
         getScroll: function () {
@@ -50,6 +40,15 @@ const marketer = {
                 $('html, body').animate({
                     scrollTop: 0
                 }, 400)
+            });
+        },
+
+        slide: function () {
+            $(".slide").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: true
             });
         }
 
