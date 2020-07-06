@@ -7,32 +7,33 @@ $(function () {
 
 const marketer = {
         init: function () {
-                marketer.toggleSlideMenu()
-                marketer.getScroll()
-                marketer.backTop();
-                marketer.slide();
+            marketer.toggleSlideMenu();
+            marketer.getScroll();
+            marketer.backTop();
+            marketer.slide();
         },
 
         toggleSlideMenu: function () {
-                $('.panel-item').on('click', function () {
-                        $(this).find('.answer').slideDown();
-                        $(this).siblings().find('.answer').slideUp();
-                }).eq(1).trigger('click');
+            $('.panel-item').on('click', function () {
+                $(this).find('.answer').slideDown();
+                $(this).siblings().find('.answer').slideUp();
+            }).eq(1).trigger('click');
 
-                $('.btn-menu').on('click', function () {
-                    $('.main-header nav ul').slideToggle();
-                });
+            $('.btn-menu').on('click', function () {
+                $('.main-header nav').slideToggle();
+            });
         },
 
+
         getScroll: function () {
-                $(window).on('scroll', function () {
-                    const scrollTop = $(Window).scrollTop();
-                        if (scrollTop > 300){
-                                $('html').addClass('show-header')
-                        } else {
-                                $('html').removeClass('show-header')
-                        }
-                });
+            $(window).on('scroll', function () {
+                const scrollTop = $(Window).scrollTop();
+                if (scrollTop > 300) {
+                    $('html').addClass('show-header')
+                } else {
+                    $('html').removeClass('show-header')
+                }
+            });
         },
 
         backTop: function () {

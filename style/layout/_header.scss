@@ -82,6 +82,16 @@
     }
     nav {
       display: flex;
+      @include screen-sm {
+        position: fixed;
+        top: 85px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+      }
       .nav-item {
         a.nav-name {
           display: flex;
@@ -176,7 +186,12 @@
       }
     }
     .btn-menu {
+      cursor: pointer;
+      font-size: 25px;
       display: none;
+      @include screen-sm {
+        display: block;
+      }
     }
   }
 }

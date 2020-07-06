@@ -534,6 +534,18 @@ body {
 #header .main-header nav {
   display: flex;
 }
+@media only screen and (max-width: 768px) {
+  #header .main-header nav {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
+}
 #header .main-header nav .nav-item a.nav-name {
   display: flex;
   align-items: center;
@@ -617,7 +629,14 @@ body {
   display: block;
 }
 #header .main-header .btn-menu {
+  cursor: pointer;
+  font-size: 25px;
   display: none;
+}
+@media only screen and (max-width: 768px) {
+  #header .main-header .btn-menu {
+    display: block;
+  }
 }
 
 #footer .main-footer {
@@ -780,19 +799,19 @@ body {
   color: #ddd;
 }
 #footer .bottom-footer .container .sns-icon a .fa-twitter:hover {
-  color: #08c;
+  color: #4099ff;
 }
 #footer .bottom-footer .container .sns-icon a .fa-pinterest:hover {
-  color: #cc0041;
+  color: #C92228;
 }
 #footer .bottom-footer .container .sns-icon a .fa-facebook:hover {
-  color: #000acc;
+  color: #3b5998;
 }
 #footer .bottom-footer .container .sns-icon a .fa-instagram:hover {
-  color: #be00cc;
+  color: #6dc993;
 }
 #footer .bottom-footer .container .sns-icon a .fa-skype:hover {
-  color: #08c;
+  color: #00aff0;
 }
 
 h1 {
