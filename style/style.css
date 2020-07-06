@@ -488,19 +488,19 @@ body {
   border-right: 1px solid rgba(182, 180, 180, 0.33);
 }
 #header .top-header .sns-links a.twitter:hover {
-  background-color: #08c;
+  background-color: #4099ff;
 }
 #header .top-header .sns-links a.pinterest:hover {
-  background-color: #cc0041;
+  background-color: #C92228;
 }
 #header .top-header .sns-links a.facebook:hover {
-  background-color: #000acc;
+  background-color: #3b5998;
 }
 #header .top-header .sns-links a.instagram:hover {
-  background-color: #be00cc;
+  background-color: #6dc993;
 }
 #header .top-header .sns-links a.skype:hover {
-  background-color: #08c;
+  background-color: #00aff0;
 }
 #header .contact {
   display: flex;
@@ -520,111 +520,104 @@ body {
 #header .main-header {
   position: relative;
 }
-@media only screen and (max-width: 768px) {
-  #header .main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-#header .main-header .container nav {
-  position: relative;
+#header .main-header .container {
+  height: 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 85px;
 }
-@media only screen and (max-width: 768px) {
-  #header .main-header .container nav {
-    position: static;
-  }
+#header .main-header .main-logo img {
+  width: 171px;
+  height: 45px;
+  object-fit: cover;
 }
-#header .main-header .container nav ul {
+#header .main-header nav {
   display: flex;
 }
-@media only screen and (max-width: 768px) {
-  #header .main-header .container nav ul {
-    position: absolute;
-    top: 85px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #fff;
-    display: none;
-  }
-}
-#header .main-header .container nav ul .nav-item .nav-name {
+#header .main-header nav .nav-item a.nav-name {
   display: flex;
   align-items: center;
+  height: 85px;
   padding: 20px;
+  color: #2F362F;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
 }
-#header .main-header .container nav ul .nav-item .nav-name .icon {
-  display: flex;
-  margin-left: 10px;
+#header .main-header nav .nav-item a.nav-name i {
+  margin-left: 3px;
 }
-#header .main-header .container .header-logo img {
-  height: 45px;
+#header .main-header nav .nav-item a.nav-name:hover {
+  color: #3498db;
 }
-#header .main-header .nav-dropdown {
+#header .main-header nav .nav-item .dropdown {
   position: absolute;
   top: 85px;
-  z-index: 1;
+  width: 480px;
+  z-index: 100;
   background-color: #fff;
-  box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.22);
-  opacity: 0;
-}
-#header .main-header .nav-dropdown.active {
-  opacity: 1;
-}
-#header .main-header .nav-dropdown ul {
-  display: flex;
-  flex-direction: column;
-}
-#header .main-header .nav-dropdown ul li {
-  color: #333;
-  padding: 10px 0;
-  cursor: pointer;
-}
-#header .main-header .nav-dropdown ul li i {
-  margin-right: 10px;
-}
-#header .main-header .nav-dropdown ul li:hover {
-  color: #0088cc;
-}
-#header .main-header .nav-dropdown.v1 {
-  right: 120px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-#header .main-header .nav-dropdown.v1 .nav-dropdown-item1 {
-  margin-right: 30px;
-}
-#header .main-header .nav-dropdown.v1 ul {
-  padding-top: 20px;
-}
-#header .main-header .nav-dropdown.v1 p {
-  font-weight: 600;
-  line-height: 1.5;
-}
-#header .main-header .nav-dropdown.v2 ul li {
-  border-bottom: 1px solid #333;
-  padding: 20px;
-}
-#header .main-header .btn-menu {
-  padding: 10px 15px;
-  font-size: 22px;
+  border-radius: 5px;
+  box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.06);
   display: none;
 }
-@media only screen and (max-width: 768px) {
-  #header .main-header .btn-menu {
-    display: block;
-  }
+#header .main-header nav .nav-item .dropdown ul {
+  display: flex;
+}
+#header .main-header nav .nav-item .dropdown ul li {
+  padding: 20px;
+}
+#header .main-header nav .nav-item .dropdown ul li:last-child {
+  margin-left: 50px;
+}
+#header .main-header nav .nav-item .dropdown ul li .sub-category h5 {
+  color: #2F362F;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#header .main-header nav .nav-item .dropdown ul li .sub-category p {
+  color: #7c8595;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+#header .main-header nav .nav-item .dropdown ul li .sub-category a {
+  display: flex;
+  color: #898989;
+  font-size: 13px;
+  padding: 7px 0;
+}
+#header .main-header nav .nav-item .dropdown ul li .sub-category a i {
+  margin-right: 5px;
+}
+#header .main-header nav .nav-item .dropdown ul li .sub-category a:hover {
+  color: #3498db;
+}
+#header .main-header nav .nav-item .small {
+  width: 200px;
+}
+#header .main-header nav .nav-item .small ul li {
+  padding: 0;
+}
+#header .main-header nav .nav-item .small ul li:last-child {
+  margin-left: 0;
+}
+#header .main-header nav .nav-item .small ul li .sub-category a {
+  width: 200px;
+  height: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #7c8595;
+}
+#header .main-header nav .nav-item .small ul li .sub-category a:last-child {
+  border: none;
+}
+#header .main-header nav .nav-item:hover .dropdown {
+  display: block;
+}
+#header .main-header .btn-menu {
+  display: none;
 }
 
 #footer .main-footer {
@@ -864,6 +857,7 @@ p.normal {
   flex: 1;
   width: 487px;
   height: 336px;
+  object-fit: cover;
 }
 .main-intro .slide .slick-dots {
   position: absolute;
@@ -983,7 +977,7 @@ p.normal {
   width: 530px;
   padding: 15px;
   display: none;
-  border-top: 3px solid #0088cc;
+  border-top: 3px solid #3498db;
 }
 .main-video .panel .panel-item .answer p {
   margin-left: 38px;
@@ -1279,7 +1273,7 @@ p.normal {
   margin-bottom: 20px;
 }
 .main-news .news-item .news-desc h2:hover {
-  color: #0088cc;
+  color: #3498db;
 }
 .main-news .news-item .news-desc .news-icon {
   display: flex;
@@ -1290,7 +1284,7 @@ p.normal {
   color: #858585;
 }
 .main-news .news-item .news-desc .news-icon a:hover {
-  color: #0088cc;
+  color: #3498db;
 }
 .main-news .news-item .news-desc .news-icon .bar {
   width: 1px;
@@ -1358,7 +1352,7 @@ p.normal {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: #08c;
+  background: #3498db;
 }
 .main-team .team-item p.normal {
   color: #ddd;
