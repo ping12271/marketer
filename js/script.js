@@ -20,7 +20,7 @@ const marketer = {
             }).eq(1).trigger('click');
 
             $('.btn-menu').on('click', function () {
-                $('.main-header nav').slideToggle();
+                $(this).prev('nav').slideToggle();
             });
         },
 

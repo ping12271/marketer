@@ -544,6 +544,7 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
+    display: none;
   }
 }
 #header .main-header nav .nav-item a.nav-name {
