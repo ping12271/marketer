@@ -675,6 +675,7 @@ p.normal {
       padding: 1px 0 30px 60px;
       @include screen-sm {
         border: none;
+        padding: 0;
       }
       h1 {
         line-height: 1.5;

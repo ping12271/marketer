@@ -11,6 +11,7 @@ const marketer = {
             marketer.getScroll();
             marketer.backTop();
             marketer.slide();
+            marketer.popup();
         },
 
         toggleSlideMenu: function () {
@@ -50,6 +51,16 @@ const marketer = {
                 autoplaySpeed: 2000,
                 arrows: false,
                 dots: true
+            });
+        },
+
+        popup: function () {
+            const src = $(this).find('img').attr('src')
+            $('.gallery li').on('click', function () {
+                $('.popup').show().find('img').attr('src', src);
+            });
+            $('.screen').on('click', function () {
+                $('.popup').hide();
             });
         }
 
