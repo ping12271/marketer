@@ -17,7 +17,7 @@ const marketer = {
     },
 
     toggleSlideMenu: function () {
-        $('.panel-item').on('click', function () {
+        $('.panel .item').on('click', function () {
             $(this).find('.answer').slideDown();
             $(this).siblings().find('.answer').slideUp();
         }).eq(1).trigger('click');
@@ -27,10 +27,9 @@ const marketer = {
         });
     },
 
-
     getScroll: function () {
         $(window).on('scroll', function () {
-            const scrollTop = $(Window).scrollTop();
+            const scrollTop = $(window).scrollTop();
             if (scrollTop > 300) {
                 $('html').addClass('show-header')
             } else {
@@ -48,11 +47,18 @@ const marketer = {
     },
 
     slide: function () {
-        $(".slide").slick({
+        $('.visual').slick({
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 4000,
             arrows: false,
             dots: true
+        });
+        $('.slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+            arrows: false
         });
     },
 

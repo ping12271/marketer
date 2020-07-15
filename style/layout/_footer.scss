@@ -1,148 +1,148 @@
 #footer {
-  .main-footer {
-    padding: 100px 0;
-    background-color: #353535;
-    .container {
-      display: flex;
+  padding-top: 100px;
+  background-color: #353535;
+  .container {
+    display: flex;
+    @include screen-sm {
+      flex-direction: column;
+    }
+    .item {
+      flex: 25%;
+      padding: 15px;
       @include screen-sm {
-          flex-direction: column;
+        padding-bottom: 100px;
       }
-      .footer-item {
-        flex: 1 1 25%;
-        margin-left: 20px;
-        @include screen-sm {
-          padding-bottom: 100px;
-        }
-        p {
-          color: #ddd;
-          line-height: 1.5;
-        }
-        h3 {
-          color: #ddd;
-          font-weight: 600;
-          position: relative;
-          padding-bottom: 20px;
-          margin-bottom: 20px;
-          &:after {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            content: '';
-            width: 50px;
-            height: 3px;
-            background: #3498db;
-            display: inline-block;
-          }
-        }
+      p {
+        color: #ddd;
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: 400;
       }
-      .score {
-        @include screen-sm {
-          padding-bottom: 100px;
-        }
-        .score-btn {
-          width: 160px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 15px;
-          background-color: #3498db;
-          border-radius: 5px;
-          color: #fff;
-          margin-top: 20px;
-          font-size: 14px;
-          &:hover {
-            background-color: rgba(0,0,0, .1);
-          }
-        }
-      }
-      .links {
-        ul {
-          margin-top: 12px;
-          li {
-            border-bottom: 1px solid #999;
-            a {
-              display: inline-block;
-              color: #fff;
-              padding: 10px 0;
-            }
-          }
-        }
-      }
-      .project {
-        @include screen-sm {
-          padding-bottom: 100px;
-        }
-        ul.gallery {
-          display: flex;
-          flex-wrap: wrap;
-          li {
-            flex: 1 1 33.333%;
-            max-width: 33.333%;
-            padding: 5px;
-          }
-        }
-        .popup {
-          position: fixed;
-          z-index: 1000;
-          top: 0;
+      h4 {
+        color: #ddd;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &:after {
+          content: '';
+          width: 50px;
+          height: 3px;
+          background: #3498db;
+          position: absolute;
           bottom: 0;
           left: 0;
-          right: 0;
-          background-color: rgba(0, 0, 0, 0.8);
-          display: none;
-          justify-content: center;
-          align-items: center;
-          i {
-            position: absolute;
-            top: 50%;
-            font-size: 50px;
-            color: #fff;
-            cursor: pointer;
-            &.fa-chevron-left {
-              left: 80px;
-            }
-            &.fa-chevron-right {
-              right: 80px;
-            }
-          }
-          .pagination {
-            color: #fff;
+        }
+      }
+    }
+    .score {
+      @include screen-sm {
+        padding-bottom: 100px;
+      }
+      a.btn {
+        width: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        background-color: #3498db;
+        border-radius: 5px;
+        color: #fff;
+        margin-top: 20px;
+        font-size: 14px;
+        transition: .5s;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(0, 0, 0, .1);
+        }
+      }
+    }
+
+    .links {
+      ul {
+        margin-top: 12px;
+        li {
+          border-bottom: 1px solid #999;
+          a {
+            display: inline-block;
+            color: #ddd;
+            padding: 10px 0;
+            font-size: 14px;
           }
         }
       }
-      .contact {
-        @include screen-sm {
-          padding-bottom: 50px;
+    }
+
+    .projects {
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          flex: 33.333%;
+          max-width: 33.333%;
+          padding: 5px;
         }
-        .info {
-          color: #ddd;
-          margin-top: 15px;
-          font-size: 14px;
-          >div {
-            margin-top: 10px;
-            i {
-              margin-right: 10px;
-              font-size: 20px;
-              color: #ddd;
-            }
-            a {
-              color: #ddd;
-              &:hover {
-                color: #0088cc;
-              }
+      }
+      .popup {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        i {
+          position: absolute;
+          top: 50%;
+          font-size: 50px;
+          color: #fff;
+          cursor: pointer;
+          &.fa-chevron-left {
+            left: 80px;
+          }
+          &.fa-chevron-right {
+            right: 80px;
+          }
+        }
+        .pagination {
+          color: #fff;
+        }
+      }
+    }
+
+    .contact {
+      .info {
+        color: #ddd;
+        margin-top: 15px;
+        font-size: 14px;
+        > div {
+          margin-top: 10px;
+          i {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #ddd;
+          }
+          a {
+            color: #ddd;
+            &:hover {
+              color: #0088cc;
             }
           }
         }
       }
     }
   }
+
   .bottom-footer {
-    @include screen-sm {
-      padding-bottom: 100px;
-    }
     padding: 20px 0;
     background-color: #353535;
     color: #999;
+    @include screen-sm {
+      padding-bottom: 100px;
+    }
     .container {
       border-top: 1px dotted #999;
       padding-top: 20px;
@@ -154,12 +154,10 @@
         align-items: center;
       }
       .by {
-        flex: 1;
         display: flex;
         align-items: center;
       }
       .sns-icon {
-        flex: 1;
         display: flex;
         justify-content: flex-end;
         align-items: center;
