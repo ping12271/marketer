@@ -5,6 +5,8 @@ $(function () {
     marketer.init();
 })
 
+let index;
+
 const marketer = {
     init: function () {
         marketer.toggleSlideMenu();
@@ -13,7 +15,6 @@ const marketer = {
         marketer.slide();
         marketer.handleImagePopup();
         marketer.handleArrows();
-        marketer.setPagination();
     },
 
     toggleSlideMenu: function () {
@@ -67,12 +68,12 @@ const marketer = {
             index = $(this).index();
             const src = $(this).find('img').attr('src');
             $('.popup').css({display: 'flex'}).find('img').attr('src', src);
-            setPagination();
-        })
+            marketer.setPagination();
+        });
 
         $('.popup').on('click', function () {
             $('.popup').hide();
-        })
+        });
     },
 
     handleArrows: function () {
@@ -93,7 +94,7 @@ const marketer = {
                 index = index + 1;
                 const src = $('.gallery li').eq(index % length).find('img').attr('src');
                 $('.popup').find('img').attr('src', src);
-                setPagination();
+                marketer.setPagination();
             }
         })
     },

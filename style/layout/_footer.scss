@@ -101,13 +101,17 @@
           color: #fff;
           cursor: pointer;
           &.fa-chevron-left {
-            left: 80px;
+            left: 5%;
           }
           &.fa-chevron-right {
-            right: 80px;
+            right: 5%;
           }
         }
         .pagination {
+          position: absolute;
+          bottom: 20%;
+          left: 50%;
+          transform: translateX(-50%);
           color: #fff;
         }
       }
