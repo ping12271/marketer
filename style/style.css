@@ -549,8 +549,6 @@ body {
 }
 #header .main-header nav .nav-item a.nav-name {
   display: flex;
-  align-items: center;
-  height: 85px;
   padding: 20px;
   color: #2F362F;
   font-size: 16px;
@@ -569,17 +567,33 @@ body {
   z-index: 100;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.06);
+  box-shadow: 1px 0 12px 1px rgba(0, 0, 0, 0.06);
   display: none;
+}
+@media only screen and (max-width: 768px) {
+  #header .main-header nav .nav-item .dropdown {
+    position: static;
+    box-shadow: none;
+  }
 }
 #header .main-header nav .nav-item .dropdown ul {
   display: flex;
+}
+@media only screen and (max-width: 768px) {
+  #header .main-header nav .nav-item .dropdown ul {
+    flex-direction: column;
+  }
 }
 #header .main-header nav .nav-item .dropdown ul li {
   padding: 20px;
 }
 #header .main-header nav .nav-item .dropdown ul li:last-child {
   margin-left: 50px;
+}
+@media only screen and (max-width: 768px) {
+  #header .main-header nav .nav-item .dropdown ul li:last-child {
+    margin-left: 0;
+  }
 }
 #header .main-header nav .nav-item .dropdown ul li .sub-category h5 {
   color: #2F362F;
@@ -608,6 +622,11 @@ body {
 #header .main-header nav .nav-item .small {
   width: 200px;
 }
+@media only screen and (max-width: 768px) {
+  #header .main-header nav .nav-item .small {
+    width: 100%;
+  }
+}
 #header .main-header nav .nav-item .small ul li {
   padding: 0;
 }
@@ -620,10 +639,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #7c8595;
+  border-bottom: 1px solid rgba(124, 133, 149, 0.28);
 }
 #header .main-header nav .nav-item .small ul li .sub-category a:last-child {
   border: none;
+}
+@media only screen and (max-width: 768px) {
+  #header .main-header nav .nav-item .small ul li .sub-category a {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
 }
 #header .main-header nav .nav-item:hover .dropdown {
   display: block;
@@ -876,6 +902,11 @@ body {
 }
 .visual .item .description .btn:hover {
   background-color: #686868;
+}
+@media only screen and (max-width: 768px) {
+  .visual .item img {
+    display: none;
+  }
 }
 .visual .slick-dots {
   position: absolute;

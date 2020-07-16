@@ -47,6 +47,11 @@
         }
       }
     }
+    img {
+      @include screen-sm {
+        display: none;
+      }
+    }
   }
   .slick-dots {
     position: absolute;
