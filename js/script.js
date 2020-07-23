@@ -50,10 +50,34 @@ const marketer = {
     slide: function () {
         $('.visual').slick({
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 2000,
             arrows: false,
             dots: true
-        });
+        })
+        var slickCustomEvent = {
+            init : function(){
+                slickCustomEvent.initialize()
+                slickCustomEvent.beforeChange()
+                slickCustomEvent.afterChange()
+            },
+            initialize : function(){
+                var dataIndex = $('[data-slick-index="0"]');
+                dataIndex.find('.item .description,.item img').addClass('fadeInUp');
+            },
+            beforeChange : function(){
+                $('.visual').on('beforeChange', function(event, slick, currentSlide){
+                    $('.item .description,.item img').removeClass('fadeInUp');
+                });
+            },
+            afterChange : function(){
+                $('.visual').on('afterChange', function(event, slick, currentSlide){
+                    var dataIndex = $('[data-slick-index="]' + currentSlide + '"');
+                    dataIndex.find('.item .description,.item img').addClass('fadeInUp');
+                });
+            }
+        }
+        slickCustomEvent.init();
+
         $('.slider').slick({
             infinite: true,
             slidesToShow: 3,
@@ -85,13 +109,13 @@ const marketer = {
                 if (index === 0) {
                     index = length;
                 }
-                index = index - 1;
+                index--;
                 const src = $('.gallery li').eq(index % length).find('img').attr('src');
                 $('.popup').find('img').attr('src', src);
             }
 
             if (type === 'right') {
-                index = index + 1;
+                index++;
                 const src = $('.gallery li').eq(index % length).find('img').attr('src');
                 $('.popup').find('img').attr('src', src);
                 marketer.setPagination();
