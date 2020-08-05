@@ -518,7 +518,12 @@ body {
   margin-right: 5px;
 }
 #header .main-header {
-  position: relative;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
 }
 #header .main-header .container {
   height: 85px;
@@ -862,6 +867,11 @@ body {
   color: #00aff0;
 }
 
+@media only screen and (max-width: 768px) {
+  .visual {
+    margin-top: 85px;
+  }
+}
 .visual .item.background1 {
   background-color: #3498db;
 }
@@ -887,7 +897,6 @@ body {
   opacity: 0;
 }
 .visual .item .description p {
-  width: 473px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -907,7 +916,7 @@ body {
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: 0.5s;
+  animation-delay: 0.2s;
   opacity: 0;
 }
 .visual .item .description .btn:hover {
@@ -1031,12 +1040,10 @@ body {
 
 .video {
   background-color: #f6f7f8;
-  padding: 90px 0;
 }
 .video .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 @media only screen and (max-width: 768px) {
   .video .container {
@@ -1045,7 +1052,8 @@ body {
 }
 .video .panel {
   width: 570px;
-  margin-left: 20px;
+  margin-left: 30px;
+  margin-top: 100px;
 }
 .video .panel .item .que {
   height: 52px;
@@ -1053,10 +1061,10 @@ body {
   align-items: center;
   color: #656565;
   font-weight: 500;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(90, 84, 84, 0.07);
+  font-size: 14px;
   padding: 0 20px;
   cursor: pointer;
+  border-bottom: 1px solid rgba(90, 84, 84, 0.07);
 }
 .video .panel .item .que:hover {
   background-color: rgba(90, 84, 84, 0.07);
@@ -1072,7 +1080,7 @@ body {
   display: none;
 }
 .video .panel .item .answer p.normal {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   font-weight: 400;
   color: #7c8595;

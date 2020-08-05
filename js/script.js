@@ -19,8 +19,8 @@ const marketer = {
 
     toggleSlideMenu: function () {
         $('.panel .item').on('click', function () {
-            $(this).find('.answer').slideDown();
-            $(this).siblings().find('.answer').slideUp();
+            $(this).find('.answer').slideDown(100);
+            $(this).siblings().find('.answer').slideUp(100);
         }).eq(1).trigger('click');
 
         $('.btn-menu').on('click', function () {

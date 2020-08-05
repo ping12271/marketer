@@ -1,4 +1,7 @@
 .visual {
+  @include screen-sm {
+    margin-top: 85px;
+  }
   .item {
     &.background1 {
       background-color: rgb(52, 152, 219);
@@ -24,13 +27,12 @@
         opacity: 0;
       }
       p {
-        width: 473px;
         font-size: 18px;
         font-weight: 400;
         line-height: 1.5;
         margin-bottom: 30px;
         opacity: 0;
-        animation-delay :0.2s
+        animation-delay : 0.2s
       }
       .btn {
         width: 163px;
@@ -44,7 +46,7 @@
         font-size: 13px;
         font-weight: 500;
         cursor: pointer;
-        transition: .5s;
+        animation-delay : 0.2s;
         opacity: 0;
         &:hover {
           background-color: #686868;
@@ -170,18 +172,17 @@
 
 .video {
   background-color: #f6f7f8;
-  padding: 90px 0;
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     @include screen-sm {
       flex-direction: column;
     }
   }
   .panel {
     width: 570px;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-top: 100px;
     .item {
       .que {
         height: 52px;
@@ -189,10 +190,10 @@
         align-items: center;
         color: #656565;
         font-weight: 500;
-        font-size: 16px;
-        border-bottom: 1px solid rgba(90, 84, 84, 0.07);
+        font-size: 14px;
         padding: 0 20px;
         cursor: pointer;
+        border-bottom: 1px solid rgba(90, 84, 84, 0.07);
         &:hover {
           background-color: rgba(90, 84, 84, 0.07);
         }
@@ -207,7 +208,7 @@
         border-top: 3px solid #3498db;
         display: none;
         p.normal {
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.5;
           font-weight: 400;
           color: #7c8595;
