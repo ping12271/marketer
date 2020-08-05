@@ -31,7 +31,7 @@ const marketer = {
     getScroll: function () {
         $(window).on('scroll', function () {
             const scrollTop = $(window).scrollTop();
-            if (scrollTop > 300) {
+            if (scrollTop > 200) {
                 $('html').addClass('show-header')
             } else {
                 $('html').removeClass('show-header')

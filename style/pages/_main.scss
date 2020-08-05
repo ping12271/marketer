@@ -13,7 +13,7 @@
       background-color: rgb(45, 62, 80);
     }
     .container {
-      height: 500px;
+      padding: 80px 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -54,6 +54,7 @@
       }
     }
     img {
+      width: 50%;
       opacity: 0;
       @include screen-sm {
         display: none;
@@ -171,6 +172,7 @@
 }
 
 .video {
+  padding: 60px 0;
   background-color: #f6f7f8;
   .container {
     display: flex;
@@ -179,10 +181,19 @@
       flex-direction: column;
     }
   }
+  iframe {
+    flex: 50%;
+    max-width: 100%;
+    min-height: 400px;
+  }
   .panel {
-    width: 570px;
+    flex: 50%;
     margin-left: 30px;
-    margin-top: 100px;
+    margin-top: 80px;
+    @include screen-sm {
+      margin-top: 30px;
+      margin-left: 0;
+    }
     .item {
       .que {
         height: 52px;
@@ -324,7 +335,7 @@
       flex-direction: column;
     }
     li {
-      flex: 1 1 25%;
+      flex: 25%;
       padding: 45px 30px;
     }
   }
@@ -436,13 +447,13 @@
       border-radius: 5px;
       &.speech-bubble {
         position: relative;
-        background: #fff;
+        background-color: #fff;
         border-radius: .4em;
         &:after {
           content: '';
           position: absolute;
           bottom: 0;
-          left: 10%;
+          left: 55px;
           width: 0;
           height: 0;
           border: 10px solid transparent;
@@ -700,6 +711,7 @@
 
 .process {
   padding: 90px 0;
+  background: url("../images/process-line.png") 50% 50% no-repeat;
   .title {
     text-align: center;
     h2 {
@@ -722,7 +734,7 @@
       flex-wrap: wrap;
     }
     li {
-      flex: 1 1 25%;
+      flex: 25%;
       padding: 15px;
       @include screen-sm {
         flex: 1 1 100%;
@@ -757,7 +769,7 @@
       img {
         border-radius: 50%;
         border: 2px dashed #cecece;
-        padding: 10px;
+        padding: 5px;
       }
     }
     p {
@@ -802,7 +814,10 @@
         line-height: 1.5;
         font-weight: 400;
         margin-bottom: 40px;
-        font-size: 28px;
+        font-size: 26px;
+        @include screen-sm {
+          margin-top: 80px;
+        }
       }
       .email {
         width: 400px;
@@ -810,7 +825,13 @@
         background-color: transparent;
         border-radius: 7px;
         border: 1px solid #fff;
-        margin-bottom: 5px
+        margin-bottom: 10px;
+      }
+      ::placeholder {
+        color: #fff;
+      }
+      .check {
+        font-weight: 900;
       }
       .btn {
         width: 140px;
@@ -839,7 +860,7 @@
 }
 .back-top {
   position: fixed;
-  right: 50px;
+  right: 30px;
   bottom: -50px;
   width: 40px;
   height: 40px;
