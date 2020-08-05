@@ -50,9 +50,10 @@ const marketer = {
     slide: function () {
         $('.visual').slick({
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 3000,
             arrows: false,
-            dots: true
+            dots: true,
+            fade: true
         });
         var slickCustomEvent = {
             init : function(){
@@ -62,17 +63,17 @@ const marketer = {
             },
             initialize : function(){
                 var dataIndex = $('[data-slick-index="0"]');
-                dataIndex.find('h1,p,.btn').addClass('fadeInUp');
+                dataIndex.find('h1,p,.btn,img').addClass('fadeInUp');
             },
             beforeChange : function(){
                 $('.visual').on('beforeChange', function(event, slick, currentSlide){
-                    $('h1,p,.btn').removeClass('fadeInUp');
+                    $('h1,p,.btn,img').removeClass('fadeInUp');
                 });
             },
             afterChange : function(){
                 $('.visual').on('afterChange', function(event, slick, currentSlide){
                     var dataIndex = $('[data-slick-index="' + currentSlide + '"');
-                    dataIndex.find('h1,p,.btn').addClass('fadeInUp');
+                    dataIndex.find('h1,p,.btn,img').addClass('fadeInUp');
                 });
             }
         }
@@ -82,19 +83,21 @@ const marketer = {
             infinite: true,
             dots: true,
             arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                    }
-                },
                 {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
                     }
                 },
             ]

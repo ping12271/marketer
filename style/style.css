@@ -884,6 +884,7 @@ body {
   font-size: 38px;
   font-weight: 500;
   margin-bottom: 30px;
+  opacity: 0;
 }
 .visual .item .description p {
   width: 473px;
@@ -891,6 +892,8 @@ body {
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 30px;
+  opacity: 0;
+  animation-delay: 0.2s;
 }
 .visual .item .description .btn {
   width: 163px;
@@ -905,9 +908,13 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: 0.5s;
+  opacity: 0;
 }
 .visual .item .description .btn:hover {
   background-color: #686868;
+}
+.visual .item img {
+  opacity: 0;
 }
 @media only screen and (max-width: 768px) {
   .visual .item img {
