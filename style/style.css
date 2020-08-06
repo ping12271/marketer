@@ -454,6 +454,10 @@ body {
   word-break: keep-all;
 }
 
+#wrap {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1180px;
   margin: 0 auto;
