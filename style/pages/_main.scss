@@ -1,103 +1,90 @@
 .visual {
+    margin-top: 85px;
   @include screen-sm {
     margin-top: 85px;
   }
-  .item {
-    &.background1 {
-      background-color: rgb(52, 152, 219);
-    }
-    &.background2 {
-      background-color: rgb(60, 192, 122);
-    }
-    &.background3 {
-      background-color: rgb(45, 62, 80);
-    }
-    .container {
-      padding: 80px 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .description {
-      color: #fff;
-      h1 {
-        font-size: 38px;
-        font-weight: 500;
-        margin-bottom: 30px;
-        opacity: 0;
+  .visual-slide {
+      position: relative;
+      .slick-dots {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          justify-content: center;
+          li {
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              border: 2px solid #fff;
+              margin-left: 5px;
+              &.slick-active {
+                  background: #fff;
+              }
+              button {
+                  display: none;
+              }
+          }
       }
-      p {
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.5;
-        margin-bottom: 30px;
-        opacity: 0;
-        animation-delay : 0.2s
+      .item {
+          &.background1 {
+              background-color: rgb(52, 152, 219);
+          }
+          &.background2 {
+              background-color: rgb(60, 192, 122);
+          }
+          &.background3 {
+              background-color: rgb(45, 62, 80);
+          }
+          .container {
+              height: 500px;
+              display: flex;
+              align-items: center;
+          }
+          .description {
+              color: #fff;
+              h1 {
+                  font-size: 38px;
+                  font-weight: 500;
+                  margin-bottom: 30px;
+                  opacity: 0;
+              }
+              p {
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  margin-bottom: 30px;
+                  opacity: 0;
+                  animation-delay : 0.2s
+              }
+              .btn {
+                  width: 163px;
+                  height: 53px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border: 2px solid #fff;
+                  border-radius: 5px;
+                  padding: 16px 35px;
+                  font-size: 13px;
+                  font-weight: 500;
+                  cursor: pointer;
+                  animation-delay : 0.2s;
+                  opacity: 0;
+                  &:hover {
+                      background-color: #686868;
+                  }
+              }
+          }
+          img {
+              width: 520px;
+              height: 450px;
+              opacity: 0;
+              @include screen-sm {
+                  display: none;
+              }
+          }
       }
-      .btn {
-        width: 163px;
-        height: 53px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #fff;
-        border-radius: 5px;
-        padding: 16px 35px;
-        font-size: 13px;
-        font-weight: 500;
-        cursor: pointer;
-        animation-delay : 0.2s;
-        opacity: 0;
-        &:hover {
-          background-color: #686868;
-        }
-      }
-    }
-    img {
-      width: 50%;
-      opacity: 0;
-      @include screen-sm {
-        display: none;
-      }
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: none;
-      }
-    }
-    .fadeInUp {
-      animation-name: fadeInUp;
-      animation-duration: 0.6s;
-      animation-fill-mode: both;
-    }
-
-  }
-  .slick-dots {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-25%);
-    right: 30px;
-
-    li {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      margin-bottom: 10px;
-
-      &.slick-active {
-        background: #fff;
-      }
-    }
-
-    button {
-      display: none;
-    }
   }
 }
 

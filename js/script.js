@@ -48,7 +48,7 @@ const marketer = {
     },
 
     slide: function () {
-        $('.visual').slick({
+        $('.visual-slide').slick({
             autoplay: true,
             autoplaySpeed: 3000,
             arrows: false,
@@ -66,12 +66,12 @@ const marketer = {
                 dataIndex.find('h1,p,.btn,img').addClass('fadeInUp');
             },
             beforeChange : function(){
-                $('.visual').on('beforeChange', function(event, slick, currentSlide){
+                $('.visual-slide').on('beforeChange', function(event, slick, currentSlide){
                     $('h1,p,.btn,img').removeClass('fadeInUp');
                 });
             },
             afterChange : function(){
-                $('.visual').on('afterChange', function(event, slick, currentSlide){
+                $('.visual-slide').on('afterChange', function(event, slick, currentSlide){
                     var dataIndex = $('[data-slick-index="' + currentSlide + '"');
                     dataIndex.find('h1,p,.btn,img').addClass('fadeInUp');
                 });

@@ -464,10 +464,28 @@ body {
   padding: 0 15px;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+}
+
+#header {
+  position: relative;
+}
 #header .top-header {
   background-color: #343434;
   height: 41px;
-  overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
   #header .top-header {
@@ -506,28 +524,34 @@ body {
 #header .top-header .sns-links a.skype:hover {
   background-color: #00aff0;
 }
-#header .contact {
+#header .top-header .contact {
   display: flex;
   align-items: center;
   color: #fff;
 }
-#header .contact > div {
+#header .top-header .contact > div {
   margin-left: 30px;
   font-size: 14px;
   display: flex;
   align-items: center;
 }
-#header .contact > div i {
+#header .top-header .contact > div i {
   font-size: 20px;
   margin-right: 5px;
 }
 #header .main-header {
-  position: fixed;
+  position: absolute;
   z-index: 100;
-  top: 0;
+  top: 41px;
   right: 0;
   left: 0;
-  background-color: white;
+  background-color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  #header .main-header {
+    position: fixed;
+    top: 0;
+  }
 }
 #header .main-header .container {
   height: 85px;
@@ -871,36 +895,62 @@ body {
   color: #00aff0;
 }
 
+.visual {
+  margin-top: 85px;
+}
 @media only screen and (max-width: 768px) {
   .visual {
     margin-top: 85px;
   }
 }
-.visual .item.background1 {
+.visual .visual-slide {
+  position: relative;
+}
+.visual .visual-slide .slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+.visual .visual-slide .slick-dots li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: 5px;
+}
+.visual .visual-slide .slick-dots li.slick-active {
+  background: #fff;
+}
+.visual .visual-slide .slick-dots li button {
+  display: none;
+}
+.visual .visual-slide .item.background1 {
   background-color: #3498db;
 }
-.visual .item.background2 {
+.visual .visual-slide .item.background2 {
   background-color: #3cc07a;
 }
-.visual .item.background3 {
+.visual .visual-slide .item.background3 {
   background-color: #2d3e50;
 }
-.visual .item .container {
-  padding: 80px 15px;
+.visual .visual-slide .item .container {
+  height: 500px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-.visual .item .description {
+.visual .visual-slide .item .description {
   color: #fff;
 }
-.visual .item .description h1 {
+.visual .visual-slide .item .description h1 {
   font-size: 38px;
   font-weight: 500;
   margin-bottom: 30px;
   opacity: 0;
 }
-.visual .item .description p {
+.visual .visual-slide .item .description p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -908,7 +958,7 @@ body {
   opacity: 0;
   animation-delay: 0.2s;
 }
-.visual .item .description .btn {
+.visual .visual-slide .item .description .btn {
   width: 163px;
   height: 53px;
   display: flex;
@@ -923,51 +973,18 @@ body {
   animation-delay: 0.2s;
   opacity: 0;
 }
-.visual .item .description .btn:hover {
+.visual .visual-slide .item .description .btn:hover {
   background-color: #686868;
 }
-.visual .item img {
-  width: 50%;
+.visual .visual-slide .item img {
+  width: 520px;
+  height: 450px;
   opacity: 0;
 }
 @media only screen and (max-width: 768px) {
-  .visual .item img {
+  .visual .visual-slide .item img {
     display: none;
   }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-.visual .item .fadeInUp {
-  animation-name: fadeInUp;
-  animation-duration: 0.6s;
-  animation-fill-mode: both;
-}
-.visual .slick-dots {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-25%);
-  right: 30px;
-}
-.visual .slick-dots li {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  margin-bottom: 10px;
-}
-.visual .slick-dots li.slick-active {
-  background: #fff;
-}
-.visual .slick-dots button {
-  display: none;
 }
 
 .sponsors {

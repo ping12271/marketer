@@ -1,8 +1,8 @@
 #header {
+  position: relative;
   .top-header {
     background-color: #343434;
     height: 41px;
-    overflow: hidden;
     @include screen-sm {
       display: none;
     }
@@ -48,30 +48,33 @@
         }
       }
     }
-  }
-  .contact {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    >div {
-      margin-left: 30px;
-      font-size: 14px;
+    .contact {
       display: flex;
       align-items: center;
-      i {
-        font-size: 20px;
-        margin-right: 5px;
+      color: #fff;
+      >div {
+        margin-left: 30px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        i {
+          font-size: 20px;
+          margin-right: 5px;
+        }
       }
     }
   }
-
   .main-header {
-    position: fixed;
+    position: absolute;
     z-index: 100;
-    top: 0;
+    top: 41px;
     right: 0;
     left: 0;
-    background-color: white;
+    background-color: #fff;
+    @include screen-sm {
+        position: fixed;
+        top: 0;
+    }
     .container {
       height: 85px;
       display: flex;
@@ -127,14 +130,12 @@
             position: static;
             box-shadow: none;
           }
-
           ul {
             display: flex;
             @include screen-sm {
               flex-direction: column;
             }
           }
-
           li {
             padding: 20px;
 
@@ -145,7 +146,6 @@
               }
             }
           }
-
           .sub-category {
             h5 {
               color: #2F362F;
@@ -153,24 +153,20 @@
               font-weight: 500;
               margin-bottom: 10px;
             }
-
             p {
               color: #7c8595;
               font-size: 13px;
               font-weight: 400;
               margin-bottom: 15px;
             }
-
             a {
               display: flex;
               color: #898989;
               font-size: 13px;
               padding: 7px 0;
-
               i {
                 margin-right: 5px;
               }
-
               &:hover {
                 color: #3498db;
               }
